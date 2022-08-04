@@ -71,6 +71,10 @@ body {
     width: 0%;
 }
 
+#timeRemaining {
+    color: #393D3F;
+}
+
 @media screen and (max-width: 768px) {
     .choice-container {
         min-width: 40rem;
