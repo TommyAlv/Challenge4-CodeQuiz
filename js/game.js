@@ -4,6 +4,7 @@ const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
+
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
@@ -45,6 +46,7 @@ let questions = [
     },
 ]
 
+
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
@@ -59,7 +61,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/end.html')
+        return window.location.assign('../html/end.html')
     }
 
     questionCounter++
@@ -100,7 +102,7 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
-        }, 1000)
+        }, 300)
     })
 })
 
